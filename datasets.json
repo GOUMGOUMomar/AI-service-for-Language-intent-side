@@ -1,0 +1,1691 @@
+{
+  "projectFileVersion": "2022-10-01-preview",
+  "stringIndexType": "Utf16CodeUnit",
+  "metadata": {
+    "projectKind": "Conversation",
+    "projectName": "RecipeAssistant",
+    "multilingual": true,
+    "description": "A dataset for a recipe assistant chatbot.",
+    "language": "en",
+    "settings": {
+      "confidenceThreshold": 0
+    }
+  },
+  "assets": {
+    "projectKind": "Conversation",
+    "intents": [
+      {
+        "category": "ExploreRecipes"
+      },
+      {
+        "category": "FindRecipeByType"
+      },
+      {
+        "category": "FindRecipeByIngredient"
+      },
+      {
+        "category": "GetRecipeDetails"
+      },
+      {
+        "category": "AddToFavorites"
+      },
+      {
+        "category": "RateRecipe"
+      },
+      {
+        "category": "ShareRecipe"
+      }
+    ],
+    "entities": [
+      {
+        "category": "RecipeType",
+        "compositionSetting": "returnLongestOverlap",
+        "list": {
+          "sublists": [
+            {
+              "listKey": "RecipeTypes",
+              "synonyms": [
+                {
+                  "language": "en",
+                  "values": [
+                    "pasta",
+                    "dessert",
+                    "chicken",
+                    "soup",
+                    "salad",
+                    "appetizer",
+                    "main course",
+                    "side dish",
+                    "breakfast",
+                    "snack",
+                    "beverage"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "prebuilts": [],
+        "requiredComponents": []
+      },
+      {
+        "category": "Ingredient",
+        "compositionSetting": "returnLongestOverlap",
+        "list": {
+          "sublists": []
+        },
+        "prebuilts": [],
+        "requiredComponents": []
+      },
+      {
+        "category": "Rating",
+        "compositionSetting": "returnLongestOverlap",
+        "list": {
+          "sublists": [
+            {
+              "listKey": "Ratings",
+              "synonyms": [
+                {
+                  "language": "en",
+                  "values": [
+                    "1 star",
+                    "2 stars",
+                    "3 stars",
+                    "4 stars",
+                    "5 stars"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "prebuilts": [],
+        "requiredComponents": []
+      }
+    ],
+    "utterances": [
+      {
+        "text": "Show me some pasta recipes",
+        "intent": "ExploreRecipes",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 13,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "text": "What can I cook with chicken?",
+        "intent": "FindRecipeByIngredient",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "Ingredient",
+            "offset": 21,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "text": "Tell me more about lasagna",
+        "intent": "GetRecipeDetails",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 14,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "text": "Add lasagna to my favorites",
+        "intent": "AddToFavorites",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 4,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "text": "Rate this chocolate cake recipe 5 stars",
+        "intent": "RateRecipe",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "Rating",
+            "offset": 30,
+            "length": 7
+          }
+        ]
+      },
+      {
+        "text": "Share this pasta salad recipe with my friend",
+        "intent": "ShareRecipe",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 11,
+            "length": 11
+          }
+        ]
+      },
+      {
+        "text": "What desserts can I make?",
+        "intent": "ExploreRecipes",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 5,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "text": "Find me some salad recipes",
+        "intent": "FindRecipeByType",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 13,
+            "length": 5
+          }
+        ]
+      },
+      {
+        "text": "Show me chicken soup recipes",
+        "intent": "FindRecipeByType",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 8,
+            "length": 11
+          }
+        ]
+      },
+      {
+        "text": "Get the details for the breakfast casserole recipe",
+        "intent": "GetRecipeDetails",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 24,
+            "length": 17
+          }
+        ]
+      },
+      {
+        "text": "Add the grilled salmon recipe to my favorites",
+        "intent": "AddToFavorites",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 9,
+            "length": 13
+          }
+        ]
+      },
+      {
+        "text": "Share this smoothie recipe with my friend",
+        "intent": "ShareRecipe",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+          {
+            "category": "RecipeType",
+            "offset": 11,
+            "length": 8
+          }
+        ]
+      },
+      {
+        "text": "What dessert recipes do you recommend?",
+        "intent": "ExploreRecipes",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 5,
+                "length": 7
+            }
+        ]
+    },
+    {
+        "text": "Find me some pasta salad recipes",
+        "intent": "FindRecipeByType",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 13,
+                "length": 11
+            }
+        ]
+    },
+    {
+        "text": "Show me chicken recipes",
+        "intent": "FindRecipeByType",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 8,
+                "length": 7
+            }
+        ]
+    },
+    {
+        "text": "Get the details for the vegetable soup recipe",
+        "intent": "GetRecipeDetails",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 24,
+                "length": 14
+            }
+        ]
+    },
+    {
+        "text": "Add the lemon chicken recipe to my favorites",
+        "intent": "AddToFavorites",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 9,
+                "length": 13
+            }
+        ]
+    },
+    {
+        "text": "Rate this cheesecake recipe 5 stars",
+        "intent": "RateRecipe",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "Rating",
+                "offset": 28,
+                "length": 7
+            }
+        ]
+    },
+    {
+        "text": "Share this pizza recipe with my friend",
+        "intent": "ShareRecipe",
+        "language": "en",
+        "dataset": "Train",
+        "entities": [
+            {
+                "category": "RecipeType",
+                "offset": 11,
+                "length": 5
+            }
+        ]
+    },
+    {
+      "text": "What appetizers can I make?",
+      "intent": "ExploreRecipes",
+      "language": "en",
+      "dataset": "Train",
+      "entities": [
+          {
+              "category": "RecipeType",
+              "offset": 5,
+              "length": 10
+          }
+      ]
+  },
+  {
+      "text": "Find me some pasta recipes with shrimp",
+      "intent": "FindRecipeByIngredient",
+      "language": "en",
+      "dataset": "Train",
+      "entities": [
+          {
+              "category": "Ingredient",
+              "offset": 29,
+              "length": 6
+          }
+      ]
+  },
+  {
+      "text": "Tell me more about the beef stew recipe",
+      "intent": "GetRecipeDetails",
+      "language": "en",
+      "dataset": "Train",
+      "entities": [
+          {
+              "category": "RecipeType",
+              "offset": 21,
+              "length": 9
+          }
+      ]
+  },
+  {
+      "text": "Rate this spaghetti carbonara recipe 4 stars",
+      "intent": "RateRecipe",
+      "language": "en",
+      "dataset": "Train",
+      "entities": [
+          {
+              "category": "Rating",
+              "offset": 31,
+              "length": 7
+          }
+      ]
+  },
+  {
+      "text": "Share this guacamole recipe with my friend",
+      "intent": "ShareRecipe",
+      "language": "en",
+      "dataset": "Train",
+      "entities": [
+          {
+              "category": "RecipeType",
+              "offset": 11,
+              "length": 9
+          }
+      ]
+  },
+  {
+    "text": "Show me some dessert recipes",
+    "intent": "ExploreRecipes",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 13,
+            "length": 7
+        }
+    ]
+},
+{
+    "text": "Find me recipes with avocado",
+    "intent": "FindRecipeByIngredient",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "Ingredient",
+            "offset": 19,
+            "length": 7
+        }
+    ]
+},
+{
+    "text": "Tell me more about the lasagna recipe",
+    "intent": "GetRecipeDetails",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 21,
+            "length": 7
+        }
+    ]
+},
+{
+    "text": "Add the banana bread recipe to my favorites",
+    "intent": "AddToFavorites",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 9,
+            "length": 11
+        }
+    ]
+},
+{
+    "text": "Share this sushi recipe with my friend",
+    "intent": "ShareRecipe",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 11,
+            "length": 5
+        }
+    ]
+},
+{
+    "text": "What main course recipes do you have?",
+    "intent": "ExploreRecipes",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 5,
+            "length": 10
+        }
+    ]
+},
+{
+    "text": "Find me recipes with chocolate",
+    "intent": "FindRecipeByIngredient",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "Ingredient",
+            "offset": 19,
+            "length": 9
+        }
+    ]
+},
+{
+    "text": "Tell me more about the pizza recipe",
+    "intent": "GetRecipeDetails",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 21,
+            "length": 5
+        }
+    ]
+},
+{
+    "text": "Rate this chocolate chip cookie recipe 4 stars",
+    "intent": "RateRecipe",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "Rating",
+            "offset": 31,
+            "length": 7
+        }
+    ]
+},
+{
+    "text": "Share this taco recipe with my friend",
+    "intent": "ShareRecipe",
+    "language": "en",
+    "dataset": "Train",
+    "entities": [
+        {
+            "category": "RecipeType",
+            "offset": 11,
+            "length": 4
+        }
+    ]
+},
+{
+  "text": "What breakfast recipes do you suggest?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 9
+      }
+  ]
+},
+{
+  "text": "Find me recipes with tomatoes",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Tell me more about the spaghetti recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 9
+      }
+  ]
+},
+{
+  "text": "Add the pumpkin soup recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Rate this spaghetti carbonara recipe 5 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 28,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this chocolate cake recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 14
+      }
+  ]
+},
+{
+  "text": "What snack recipes can I try?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 5
+      }
+  ]
+},
+{
+  "text": "Find me recipes with chicken breast",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 13
+      }
+  ]
+},
+{
+  "text": "Tell me more about the apple crumble recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Add the chicken curry recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Rate this vegetable stir-fry recipe 4 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 31,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this avocado toast recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "What salad recipes do you have?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 6
+      }
+  ]
+},
+{
+  "text": "Find me recipes with mushrooms",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 9
+      }
+  ]
+},
+{
+  "text": "Tell me more about the banana smoothie recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 14
+      }
+  ]
+},
+{
+  "text": "Add the pumpkin pie recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 11
+      }
+  ]
+},
+{
+  "text": "Rate this chicken salad recipe 5 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 28,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this shrimp scampi recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 13
+      }
+  ]
+},
+{
+  "text": "What drink recipes can I make?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 5
+      }
+  ]
+},
+{
+  "text": "Find me recipes with spinach",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Tell me more about the chocolate mousse recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 14
+      }
+  ]
+},
+{
+  "text": "Add the lasagna recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this chocolate chip cookie recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 21
+      }
+  ]
+},
+{
+  "text": "What sandwich recipes do you have?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Find me recipes with broccoli",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Add the apple crumble recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Rate this chicken curry recipe 5 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 28,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this vegetable stir-fry recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 14
+      }
+  ]
+},
+{
+  "text": "What dip recipes can I make?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 3
+      }
+  ]
+},
+{
+  "text": "Find me recipes with zucchini",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Tell me more about the grilled salmon recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Add the chocolate chip cookie recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 21
+      }
+  ]
+},
+{
+  "text": "What sushi recipes do you suggest?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 5
+      }
+  ]
+},
+
+{
+  "text": "Tell me more about the shrimp cocktail recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 15
+      }
+  ]
+},
+{
+  "text": "Add the Caesar salad recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "Share this banana bread recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 12
+      }
+  ]
+},
+{
+  "text": "What soup recipes can I make?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 4
+      }
+  ]
+},
+{
+  "text": "Find me recipes with carrots",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Tell me more about the grilled cheese sandwich recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 21
+      }
+  ]
+},
+{
+  "text": "Add the chicken noodle soup recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 17
+      }
+  ]
+},
+{
+  "text": "Rate this chocolate chip pancake recipe 4 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 28,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this spaghetti recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "What vegetarian recipes do you have?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 10
+      }
+  ]
+},
+{
+  "text": "Find me recipes with tofu",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 4
+      }
+  ]
+},
+{
+  "text": "Tell me more about the beef stir-fry recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 13
+      }
+  ]
+},
+{
+  "text": "Add the sushi recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 5
+      }
+  ]
+},
+{
+  "text": "Rate this grilled chicken recipe 5 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 28,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Share this vegetable soup recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 14
+      }
+  ]
+},
+{
+  "text": "What breakfast recipes can I make?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Find me recipes with bacon",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 5
+      }
+  ]
+},
+{
+  "text": "Tell me more about the French toast recipe",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 21,
+          "length": 11
+      }
+  ]
+},
+{
+  "text": "Add the pancakes recipe to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 8
+      }
+  ]
+},
+{
+  "text": "Share this waffle recipe with my friend",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 6
+      }
+  ]
+},
+{
+  "text": "I'm craving some pizza, can you help?",
+  "intent": "ExploreRecipes",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 15,
+          "length": 5
+      }
+  ]
+},
+{
+  "text": "Can you find me recipes with shrimp?",
+  "intent": "FindRecipeByIngredient",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 24,
+          "length": 6
+      }
+  ]
+},
+{
+  "text": "I want to know more about spaghetti carbonara",
+  "intent": "GetRecipeDetails",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 23,
+          "length": 17
+      }
+  ]
+},
+{
+  "text": "Please add spaghetti carbonara to my favorites",
+  "intent": "AddToFavorites",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 17
+      }
+  ]
+},
+{
+  "text": "I rate this tiramisu recipe 5 stars",
+  "intent": "RateRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "Rating",
+          "offset": 26,
+          "length": 7
+      }
+  ]
+},
+{
+  "text": "Let me share this lasagna recipe with my sister",
+  "intent": "ShareRecipe",
+  "language": "en",
+  "dataset": "Train",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 13,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Add the spaghetti carbonara recipe to my favorites",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 18
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Save the chocolate cake recipe for later",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 14
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Bookmark the chicken Alfredo recipe",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 11,
+          "length": 13
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Save the shrimp scampi recipe to my favorites",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 13
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Bookmark the vegetarian lasagna recipe",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 10,
+          "length": 17
+      }
+  ]
+},
+{
+  "intent": "AddToFavorites",
+  "language": "en-us",
+  "text": "Add the apple pie recipe to my favorites",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 9
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "What sweet treats can I make?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 11
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Recommend some dessert ideas",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 12,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "I'm in the mood for something sweet, any dessert recommendations?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 35,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Find me some delicious dessert options",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 17,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "What are your top dessert picks?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 9,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "I want to satisfy my sweet tooth, any dessert suggestions?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 34,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Looking for dessert inspirations, what do you recommend?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 17,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "I'm craving something sugary, any dessert ideas?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 27,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Satisfy my sweet cravings, show me dessert recipes",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 20,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "What are some popular dessert choices?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 23,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Give me some dessert options to satisfy my sweet tooth",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 14,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Show me dessert recipes that are easy to make",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 8,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "Looking for dessert ideas, any recommendations?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 14,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "ExploreRecipes",
+  "language": "en-us",
+  "text": "What dessert recipes are trending right now?",
+  "entities": [
+      {
+          "category": "RecipeType",
+          "offset": 5,
+          "length": 7
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Looking for pasta recipes that include shrimp",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 38,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Can you recommend some pasta dishes with shrimp?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 30,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Show me pasta recipes that use shrimp as an ingredient",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 30,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "I'm in the mood for pasta with shrimp, any recipe suggestions?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 23,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Looking for shrimp pasta recipes, can you help?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 14,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Recommend pasta dishes featuring shrimp",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 28,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Show me recipes for shrimp pasta",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 19,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "I want to cook pasta with shrimp tonight, any recipes?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 22,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Looking for pasta dishes with shrimp, any recommendations?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 28,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "I'm craving shrimp pasta, what recipes do you suggest?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 15,
+          "length": 6
+      }
+  ]
+},
+{
+  "intent": "FindRecipeByIngredient",
+  "language": "en-us",
+  "text": "Can you show me pasta recipes with shrimp in them?",
+  "entities": [
+      {
+          "category": "Ingredient",
+          "offset": 26,
+          "length": 6
+      }
+  ]
+}
+]
+  }
+}

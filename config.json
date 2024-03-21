@@ -1,0 +1,7 @@
+{
+    "TEXT_ANALYTICS_ENDPOINT_KEY": "KEY 1 or KEY 2",
+    "TEXT_ANALYTICS_ENDPOINT_URL": "Endpoint",
+    "AZURE_CONVERSATIONS_PROJECT_NAME" : "project name",
+    "AZURE_CONVERSATIONS_DEPLOYMENT_NAME" : "deployment name"
+  }
+  
